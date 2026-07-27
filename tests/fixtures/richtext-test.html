@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fillin Rich Text Harness</title>
+    <style>
+      #article-body {
+        min-height: 320px;
+        line-height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <label for="article-title">文章标题</label>
+      <input id="article-title" maxlength="80" placeholder="请输入标题" />
+
+      <div class="editor-shell">
+        <div class="editor-placeholder">请输入正文</div>
+        <div
+          id="article-body"
+          role="textbox"
+          contenteditable="true"
+          data-placeholder="请输入正文"
+        ></div>
+      </div>
+
+      <output id="harness-result">running</output>
+    </main>
+    <script type="module" src="/src/dev/contentHarness.ts"></script>
+  </body>
+</html>

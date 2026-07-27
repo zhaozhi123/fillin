@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Fillin — AI Form Filler"
+  },
+  "extensionShortName": {
+    "message": "Fillin"
+  },
+  "extensionDescription": {
+    "message": "Context-aware autofill that writes, verifies, and never submits forms for you."
+  },
+  "actionTitle": {
+    "message": "Open Fillin"
+  }
+}

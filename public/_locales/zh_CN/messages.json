@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Fillin — AI 智能填表"
+  },
+  "extensionShortName": {
+    "message": "Fillin"
+  },
+  "extensionDescription": {
+    "message": "理解页面语境，智能填写并重新检查，始终由你决定是否提交。"
+  },
+  "actionTitle": {
+    "message": "打开 Fillin"
+  }
+}

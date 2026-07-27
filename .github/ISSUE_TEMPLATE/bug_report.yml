@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem in Fillin
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not include API keys, personal form data, or private page content.
+  - type: input
+    id: version
+    attributes:
+      label: Fillin version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser version
+      placeholder: Chrome 140
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Use a public or synthetic example whenever possible.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data safety
+      options:
+        - label: I removed API keys, personal data, and private page content.
+          required: true

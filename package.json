@@ -1,0 +1,40 @@
+{
+  "name": "fillin-ai-form-filler",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A context-aware Chrome extension that fills forms without submitting them.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:ui": "vite --config vite.ui.config.ts",
+    "dev:visual": "vite --config tests/visual/vite.config.ts",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "test": "npm run test:frame-routing && npm run test:agent-loop && npm run test:language-generation && npm run test:ai-endpoint",
+    "check": "npm test && npm run build",
+    "test:frame-routing": "node --experimental-strip-types scripts/frame-routing.test.ts",
+    "test:agent-loop": "node scripts/run-bundled-test.mjs scripts/agent-loop.test.ts",
+    "test:language-generation": "node scripts/run-bundled-test.mjs scripts/language-generation.test.ts",
+    "test:ai-endpoint": "node --experimental-strip-types scripts/ai-endpoint.test.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.23",
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
